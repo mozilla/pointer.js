@@ -9,7 +9,7 @@ The following events are generated:
 * `pointerdown`: based on mousedown/touchstart
 * `pointerup`: based on mouseup/touchend
 * `pointermove`: based on mousemove/touchmove
-* `pointerlave`: based on mouseout/touchleave
+* `pointerleave`: based on mouseout/touchleave
 * `pointerclick`: a 'fast click' event based on a sequence of the above events. Additional heuristics are applied to determine whether or not to generate a `pointerclick`.
 
 ## Event Objects
