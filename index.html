@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>Pointer Events Test</title>
+    <style>
+    div {
+        margin: 0 10px;
+        border: 1px solid black;
+        line-height: 40px;
+        text-align: center;
+    }
+    input {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    b {
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        border: 1px solid black;
+        pointer-events: none;
+        border-radius: 32px;
+        text-align: center;
+        line-height: 64px;
+    }
+    i {
+        position: fixed;
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+    #lineX {
+        height: 100%;
+        border-left: 1px solid black;
+    }
+    #lineY {
+        width: 100%;
+        position: absolute;
+        border-top: 1px solid black;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Pointer Events Test</h1>
+    <b></b>
+    <i id="lineX"></i>
+    <i id="lineY"></i>
+    <script src="pointer.js"></script>
+    <script src="dom.js"></script>
+    <script>
+        dom('body').append(dom.tag('input')
+                   .attr({'id': 'foo', 'data-foo': 'bar'})
+                   .css({'border-color': 'red'}));
+        for (var i=0; i<100; i++) {
+            dom('body').append(dom.tag('div').text('foo'));
+        }
+        dom('body').on('pointermove', function(e) {
+        });
+        var bel = dom('b');
+        var input = dom('input')[0];
+        document.body.addEventListener('pointermove', function(e) {
+            bel.css({'left': e.x-32+'px', 'top': e.y-32+'px'});
+            dom('#lineX').css({'left': e.x+'px'});
+            dom('#lineY').css({'top': e.y+'px'});
+            dom('b').empty().text(e.x);
+        });
+        dom('body').delegate('pointerclick', 'div', function(e) {
+            e.target.innerHTML = Date.now();
+        });
+    </script>
+  </body>
+</html>

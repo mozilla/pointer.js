@@ -1,0 +1,10 @@
+{
+    "name": "Pointer Test",
+    "description": "Test Page for Pointer Events Polyfill",
+    "developer": {
+        "name": "Potch",
+        "url": "https://github.com/potch/"
+    },
+    "launch_path": "/index.html",
+    "default_locale": "en"
+}
