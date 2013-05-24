@@ -16,8 +16,8 @@ The following events are generated:
 
 `pointer` events have the following custom properties:
 
-* maskedEvent: the event that triggered the pointer event.
-* touch: boolean- is maskedEvent a touch event?
-* mouse: boolean- is maskedEvent a mouse event?
-* x: page-normalized x coordinate of the event.
-* y: page-normalized y coordinate of the event.
+* `maskedEvent`: the event that triggered the pointer event.
+* `touch`: boolean- is maskedEvent a touch event?
+* `mouse`: boolean- is maskedEvent a mouse event?
+* `x`: page-normalized x coordinate of the event.
+* `y`: page-normalized y coordinate of the event.
