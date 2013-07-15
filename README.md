@@ -2,6 +2,10 @@
 
 Normalizes mouse/touch events into 'pointer' events.
 
+## Note
+
+This library is in the process of being re-written to support the [W3C Pointer Events specification](http://www.w3.org/TR/pointerevents/).
+
 ## Types of Events
 
 The following events are generated:
