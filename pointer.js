@@ -84,6 +84,7 @@
             }
         }
         e.target.maybeClick = false;
+        e.preventDefault();
     }
 
     function makePointerEvent(type, e) {
